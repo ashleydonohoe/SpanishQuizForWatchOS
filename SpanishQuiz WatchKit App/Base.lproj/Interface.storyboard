@@ -22,17 +22,34 @@
                 </controller>
             </objects>
         </scene>
-        <!--Interface Controller-->
+        <!--Question Screen-->
         <scene sceneID="CIS-Gw-y5j">
             <objects>
-                <controller id="3GD-6e-c9x">
+                <controller id="3GD-6e-c9x" customClass="QuestionScreen" customModule="SpanishQuiz_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Translate: " id="YjO-gC-wKE"/>
-                        <label alignment="center" verticalAlignment="center" text="Hola" id="cUh-ZI-U9G"/>
+                        <label height="44" alignment="center" text="What's the English for:" numberOfLines="2" id="YjO-gC-wKE"/>
+                        <label alignment="center" verticalAlignment="center" text="Hola" minimumScaleFactor="0.5" id="cUh-ZI-U9G">
+                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="heavy" pointSize="34"/>
+                        </label>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Translate" id="Hz3-d6-Piv">
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="enterAnswer" destination="3GD-6e-c9x" id="AwR-kU-tDY"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Next" id="ySR-lV-omr">
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="next" destination="3GD-6e-c9x" id="IBq-f5-xrM"/>
+                            </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="answerButton" destination="Hz3-d6-Piv" id="X5F-vg-Uhq"/>
+                        <outlet property="nextButton" destination="ySR-lV-omr" id="WDZ-Pi-jve"/>
+                        <outlet property="questionField" destination="cUh-ZI-U9G" id="vyb-RL-Dgs"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="325" y="37"/>

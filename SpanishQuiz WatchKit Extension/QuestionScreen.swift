@@ -12,6 +12,9 @@ import Foundation
 
 class QuestionScreen: WKInterfaceController {
 
+    @IBOutlet var questionField: WKInterfaceLabel!
+    @IBOutlet var nextButton: WKInterfaceButton!
+    @IBOutlet var answerButton: WKInterfaceButton!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -28,4 +31,23 @@ class QuestionScreen: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func next() {
+        // Go to next question in array
+    }
+    
+    @IBAction func enterAnswer() {
+        
+        answerButton.setHidden(true)
+        
+        presentTextInputController(withSuggestions: [""], allowedInputMode: .plain) { (result) in
+            if let choice = result {
+               print(choice[0])
+                if((choice[0] as AnyObject).lowercased as String) == "hello" {
+                    self.questionField.setText("CORRECT!")
+                    self.nextButton.setHidden(false)
+                }
+            }
+        }
+        
+    }
 }
