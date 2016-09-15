@@ -11,6 +11,8 @@ import Foundation
 
 
 class QuestionScreen: WKInterfaceController {
+    
+    let questionModel = Model().getQuestionSet()
 
     @IBOutlet var questionField: WKInterfaceLabel!
     @IBOutlet var nextButton: WKInterfaceButton!
@@ -33,6 +35,9 @@ class QuestionScreen: WKInterfaceController {
 
     @IBAction func next() {
         // Go to next question in array
+        print("Next")
+        answerButton.setHidden(false)
+        nextButton.setHidden(true)
     }
     
     @IBAction func enterAnswer() {
@@ -44,10 +49,16 @@ class QuestionScreen: WKInterfaceController {
                print(choice[0])
                 if((choice[0] as AnyObject).lowercased as String) == "hello" {
                     self.questionField.setText("CORRECT!")
-                    self.nextButton.setHidden(false)
+                } else {
+                    self.questionField.setText("WRONG!")
                 }
             }
+                 self.nextButton.setHidden(false)
         }
+        
+    }
+    
+    func checkAnswer(questionSet: Answer, answer: String) {
         
     }
 }
