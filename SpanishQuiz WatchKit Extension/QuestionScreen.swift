@@ -18,6 +18,7 @@ class QuestionScreen: WKInterfaceController {
     var questionsAsked = 0
     var currentIndex = 0
 
+    @IBOutlet var OKbutton: WKInterfaceButton!
     @IBOutlet var topLabel: WKInterfaceLabel!
     @IBOutlet var questionField: WKInterfaceLabel!
     @IBOutlet var nextButton: WKInterfaceButton!
@@ -32,6 +33,7 @@ class QuestionScreen: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         questionField.setText(questionModel[currentIndex].question)
+        nextButton.setHidden(true)
     }
 
     override func didDeactivate() {
@@ -42,10 +44,12 @@ class QuestionScreen: WKInterfaceController {
     @IBAction func next() {
         // Go to next question in array
         if currentIndex == questionModel.count {
+            nextButton.setHidden(true)
             answerButton.setHidden(true)
             topLabel.setText("Result:")
             let resultMessage = "\(numberCorrect) CORRECT"
             questionField.setText(resultMessage)
+            OKbutton.setHidden(false)
             numberWrong = 0
             numberCorrect = 0
             currentIndex = 0

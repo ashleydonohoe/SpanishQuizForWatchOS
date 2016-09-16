@@ -32,7 +32,7 @@
                             <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="heavy" pointSize="34"/>
                         </label>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="OK" id="iaO-B3-X21">
+                        <button width="1" alignment="center" verticalAlignment="bottom" hidden="YES" title="OK" id="iaO-B3-X21">
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="endGame" destination="3GD-6e-c9x" id="Vup-Pz-8Jm"/>
@@ -52,6 +52,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="OKbutton" destination="iaO-B3-X21" id="2Nj-8x-j0H"/>
                         <outlet property="answerButton" destination="Hz3-d6-Piv" id="X5F-vg-Uhq"/>
                         <outlet property="nextButton" destination="ySR-lV-omr" id="WDZ-Pi-jve"/>
                         <outlet property="questionField" destination="cUh-ZI-U9G" id="vyb-RL-Dgs"/>
