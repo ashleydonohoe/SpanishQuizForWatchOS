@@ -30,6 +30,7 @@ class QuestionScreen: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        questionField.setText(questionModel[currentIndex].question)
     }
 
     override func didDeactivate() {
@@ -41,7 +42,7 @@ class QuestionScreen: WKInterfaceController {
         // Go to next question in array
         if currentIndex == questionModel.count {
             print("Game Over")
-            dismiss()
+            presentController(withName: "Done", context: nil)
         } else {
             print("Next")
             let question = questionModel[currentIndex]
@@ -58,7 +59,9 @@ class QuestionScreen: WKInterfaceController {
         presentTextInputController(withSuggestions: [""], allowedInputMode: .plain) { (result) in
             if let choice = result {
                 let answerGiven = (choice[0] as! String).lowercased()
-                if(self.questionModel[self.currentIndex].answers.contains(answerGiven)) {
+                let answers = self.questionModel[self.currentIndex].answers
+                print(answers)
+                if(answers.contains(answerGiven)) {
                     self.questionField.setText("CORRECT!")
                     self.numberCorrect += 1
                 } else {

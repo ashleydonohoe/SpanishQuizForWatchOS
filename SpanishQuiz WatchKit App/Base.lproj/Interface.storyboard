@@ -54,5 +54,26 @@
             </objects>
             <point key="canvasLocation" x="325" y="37"/>
         </scene>
+        <!--Done-->
+        <scene sceneID="Co1-c5-pIy">
+            <objects>
+                <controller identifier="Done" id="9R6-tp-3ns">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="YOU WIN!" textAlignment="center" minimumScaleFactor="0.5" id="FQL-CO-gYv">
+                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="heavy" pointSize="34"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="OK" id="NhT-NL-DfZ">
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="enterAnswer" destination="3GD-6e-c9x" id="kzd-4O-z8p"/>
+                            </connections>
+                        </button>
+                        <label height="44" alignment="center" text="Result:" numberOfLines="2" id="C3L-en-DUv"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="547" y="37"/>
+        </scene>
     </scenes>
 </document>
