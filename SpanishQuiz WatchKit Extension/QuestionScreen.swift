@@ -57,11 +57,13 @@ class QuestionScreen: WKInterfaceController {
         
         presentTextInputController(withSuggestions: [""], allowedInputMode: .plain) { (result) in
             if let choice = result {
-                let answerGiven = choice[0] as! String
+                let answerGiven = (choice[0] as! String).lowercased()
                 if(self.questionModel[self.currentIndex].answers.contains(answerGiven)) {
                     self.questionField.setText("CORRECT!")
+                    self.numberCorrect += 1
                 } else {
                     self.questionField.setText("WRONG!")
+                    self.numberWrong += 1
                 }
             }
                 self.currentIndex += 1
