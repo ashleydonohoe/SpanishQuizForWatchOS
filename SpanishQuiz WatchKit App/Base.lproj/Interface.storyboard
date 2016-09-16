@@ -32,6 +32,12 @@
                             <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="heavy" pointSize="34"/>
                         </label>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="OK" id="iaO-B3-X21">
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="endGame" destination="3GD-6e-c9x" id="Vup-Pz-8Jm"/>
+                            </connections>
+                        </button>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Translate" id="Hz3-d6-Piv">
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -49,34 +55,11 @@
                         <outlet property="answerButton" destination="Hz3-d6-Piv" id="X5F-vg-Uhq"/>
                         <outlet property="nextButton" destination="ySR-lV-omr" id="WDZ-Pi-jve"/>
                         <outlet property="questionField" destination="cUh-ZI-U9G" id="vyb-RL-Dgs"/>
+                        <outlet property="topLabel" destination="YjO-gC-wKE" id="uqw-0B-Kbb"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="316" y="37"/>
-        </scene>
-        <!--Done-->
-        <scene sceneID="Co1-c5-pIy">
-            <objects>
-                <controller identifier="done" title="Done" id="9R6-tp-3ns" customClass="ResultsScreen" customModule="SpanishQuiz">
-                    <items>
-                        <label alignment="center" verticalAlignment="center" text="YOU WIN!" textAlignment="center" minimumScaleFactor="0.5" id="FQL-CO-gYv">
-                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" type="system" weight="heavy" pointSize="34"/>
-                        </label>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="OK" id="NhT-NL-DfZ">
-                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="endGame" destination="9R6-tp-3ns" id="IJP-L5-p4B"/>
-                            </connections>
-                        </button>
-                        <label height="44" alignment="center" text="Result:" numberOfLines="2" id="C3L-en-DUv"/>
-                    </items>
-                    <connections>
-                        <outlet property="resultsLabel" destination="FQL-CO-gYv" id="deh-JQ-0ad"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="547" y="37"/>
         </scene>
     </scenes>
 </document>

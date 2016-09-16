@@ -18,6 +18,7 @@ class QuestionScreen: WKInterfaceController {
     var questionsAsked = 0
     var currentIndex = 0
 
+    @IBOutlet var topLabel: WKInterfaceLabel!
     @IBOutlet var questionField: WKInterfaceLabel!
     @IBOutlet var nextButton: WKInterfaceButton!
     @IBOutlet var answerButton: WKInterfaceButton!
@@ -41,20 +42,24 @@ class QuestionScreen: WKInterfaceController {
     @IBAction func next() {
         // Go to next question in array
         if currentIndex == questionModel.count {
-            print("Game Over")
+            answerButton.setHidden(true)
+            topLabel.setText("Result:")
             let resultMessage = "\(numberCorrect) CORRECT"
-            presentController(withName: "done", context: nil)
+            questionField.setText(resultMessage)
             numberWrong = 0
             numberCorrect = 0
             currentIndex = 0
             questionsAsked = 0
         } else {
-            print("Next")
             let question = questionModel[currentIndex]
             questionField.setText(question.question)
             answerButton.setHidden(false)
             nextButton.setHidden(true)
         }
+    }
+    
+    @IBAction func endGame() {
+        popToRootController()
     }
     
     @IBAction func enterAnswer() {
@@ -65,7 +70,7 @@ class QuestionScreen: WKInterfaceController {
             if let choice = result {
                 let answerGiven = (choice[0] as! String).lowercased()
                 let answers = self.questionModel[self.currentIndex].answers
-                print(answers)
+
                 if(answers.contains(answerGiven)) {
                     self.questionField.setText("CORRECT!")
                     self.numberCorrect += 1

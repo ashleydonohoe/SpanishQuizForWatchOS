@@ -21,8 +21,6 @@
 		E0022E941D8A443B00F5ED58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0022E931D8A443B00F5ED58 /* Assets.xcassets */; };
 		E0022EA51D8A488C00F5ED58 /* QuestionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0022EA41D8A488C00F5ED58 /* QuestionScreen.swift */; };
 		E0022EA71D8A50D200F5ED58 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0022EA61D8A50D200F5ED58 /* Answer.swift */; };
-		E0022EA91D8B82D400F5ED58 /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0022EA81D8B82D400F5ED58 /* ResultsScreen.swift */; };
-		E0022EAA1D8B82D400F5ED58 /* ResultsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0022EA81D8B82D400F5ED58 /* ResultsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +84,6 @@
 		E0022E951D8A443B00F5ED58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0022EA41D8A488C00F5ED58 /* QuestionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScreen.swift; sourceTree = "<group>"; };
 		E0022EA61D8A50D200F5ED58 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		E0022EA81D8B82D400F5ED58 /* ResultsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +156,6 @@
 				E0022E951D8A443B00F5ED58 /* Info.plist */,
 				E0022EA41D8A488C00F5ED58 /* QuestionScreen.swift */,
 				E0022EA61D8A50D200F5ED58 /* Answer.swift */,
-				E0022EA81D8B82D400F5ED58 /* ResultsScreen.swift */,
 			);
 			path = "SpanishQuiz WatchKit Extension";
 			sourceTree = "<group>";
@@ -304,7 +300,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0022E6F1D8A443A00F5ED58 /* ViewController.swift in Sources */,
-				E0022EA91D8B82D400F5ED58 /* ResultsScreen.swift in Sources */,
 				E0022E6D1D8A443A00F5ED58 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +310,6 @@
 			files = (
 				E0022EA51D8A488C00F5ED58 /* QuestionScreen.swift in Sources */,
 				E0022E921D8A443B00F5ED58 /* ExtensionDelegate.swift in Sources */,
-				E0022EAA1D8B82D400F5ED58 /* ResultsScreen.swift in Sources */,
 				E0022E901D8A443B00F5ED58 /* InterfaceController.swift in Sources */,
 				E0022EA71D8A50D200F5ED58 /* Answer.swift in Sources */,
 			);
@@ -577,6 +571,7 @@
 				E0022E9A1D8A443B00F5ED58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0022E9C1D8A443B00F5ED58 /* Build configuration list for PBXNativeTarget "SpanishQuiz WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -585,6 +580,7 @@
 				E0022E9E1D8A443B00F5ED58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0022EA01D8A443B00F5ED58 /* Build configuration list for PBXNativeTarget "SpanishQuiz" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +589,7 @@
 				E0022EA21D8A443B00F5ED58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
