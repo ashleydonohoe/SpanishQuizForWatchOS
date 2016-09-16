@@ -57,7 +57,7 @@
         <!--Done-->
         <scene sceneID="Co1-c5-pIy">
             <objects>
-                <controller identifier="Done" id="9R6-tp-3ns">
+                <controller identifier="Done" id="9R6-tp-3ns" customClass="ResultsScreen" customModule="SpanishQuiz">
                     <items>
                         <label alignment="center" verticalAlignment="center" text="YOU WIN!" textAlignment="center" minimumScaleFactor="0.5" id="FQL-CO-gYv">
                             <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,11 +66,14 @@
                         <button width="1" alignment="left" verticalAlignment="bottom" title="OK" id="NhT-NL-DfZ">
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="enterAnswer" destination="3GD-6e-c9x" id="kzd-4O-z8p"/>
+                                <action selector="endGame" destination="9R6-tp-3ns" id="IJP-L5-p4B"/>
                             </connections>
                         </button>
                         <label height="44" alignment="center" text="Result:" numberOfLines="2" id="C3L-en-DUv"/>
                     </items>
+                    <connections>
+                        <outlet property="resultsLabel" destination="FQL-CO-gYv" id="deh-JQ-0ad"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="547" y="37"/>

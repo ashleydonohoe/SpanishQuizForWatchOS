@@ -42,6 +42,10 @@ class QuestionScreen: WKInterfaceController {
         // Go to next question in array
         if currentIndex == questionModel.count {
             print("Game Over")
+            numberWrong = 0
+            numberCorrect = 0
+            currentIndex = 0
+            questionsAsked = 0
             presentController(withName: "Done", context: nil)
         } else {
             print("Next")
@@ -75,7 +79,12 @@ class QuestionScreen: WKInterfaceController {
         
     }
     
-    func checkAnswer(questionSet: Answer, answer: String) {
-        
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        if segueIdentifier == "Done" {
+            let resultMessage = "\(numberCorrect) CORRECT"
+            return resultMessage
+        } else {
+            return "ERROR"
+        }
     }
 }
