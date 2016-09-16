@@ -52,12 +52,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="325" y="37"/>
+            <point key="canvasLocation" x="316" y="37"/>
         </scene>
         <!--Done-->
         <scene sceneID="Co1-c5-pIy">
             <objects>
-                <controller identifier="Done" id="9R6-tp-3ns" customClass="ResultsScreen" customModule="SpanishQuiz">
+                <controller identifier="done" title="Done" id="9R6-tp-3ns" customClass="ResultsScreen" customModule="SpanishQuiz">
                     <items>
                         <label alignment="center" verticalAlignment="center" text="YOU WIN!" textAlignment="center" minimumScaleFactor="0.5" id="FQL-CO-gYv">
                             <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

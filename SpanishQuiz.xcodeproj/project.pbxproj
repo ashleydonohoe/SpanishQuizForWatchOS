@@ -84,7 +84,6 @@
 		E0022E911D8A443B00F5ED58 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		E0022E931D8A443B00F5ED58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0022E951D8A443B00F5ED58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0022EA31D8A488C00F5ED58 /* SpanishQuiz WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpanishQuiz WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		E0022EA41D8A488C00F5ED58 /* QuestionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionScreen.swift; sourceTree = "<group>"; };
 		E0022EA61D8A50D200F5ED58 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		E0022EA81D8B82D400F5ED58 /* ResultsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsScreen.swift; sourceTree = "<group>"; };
@@ -159,7 +158,6 @@
 				E0022E931D8A443B00F5ED58 /* Assets.xcassets */,
 				E0022E951D8A443B00F5ED58 /* Info.plist */,
 				E0022EA41D8A488C00F5ED58 /* QuestionScreen.swift */,
-				E0022EA31D8A488C00F5ED58 /* SpanishQuiz WatchKit App-Bridging-Header.h */,
 				E0022EA61D8A50D200F5ED58 /* Answer.swift */,
 				E0022EA81D8B82D400F5ED58 /* ResultsScreen.swift */,
 			);

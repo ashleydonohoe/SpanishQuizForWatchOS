@@ -15,9 +15,10 @@ class ResultsScreen: WKInterfaceController {
     @IBOutlet var resultsLabel: WKInterfaceLabel!
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        print(context)
         
         // Configure interface objects here.
-        resultsLabel.setText(context as! String?)
+//        resultsLabel.setText(context as! String?)
     }
 
     override func willActivate() {
