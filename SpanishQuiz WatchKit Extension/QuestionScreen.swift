@@ -13,6 +13,10 @@ import Foundation
 class QuestionScreen: WKInterfaceController {
     
     let questionModel = Model().getQuestionSet()
+    var numberCorrect = 0
+    var numberWrong = 0
+    var questionsAsked = 0
+    var currentIndex = 0
 
     @IBOutlet var questionField: WKInterfaceLabel!
     @IBOutlet var nextButton: WKInterfaceButton!
@@ -35,9 +39,16 @@ class QuestionScreen: WKInterfaceController {
 
     @IBAction func next() {
         // Go to next question in array
-        print("Next")
-        answerButton.setHidden(false)
-        nextButton.setHidden(true)
+        if currentIndex == questionModel.count {
+            print("Game Over")
+            dismiss()
+        } else {
+            print("Next")
+            let question = questionModel[currentIndex]
+            questionField.setText(question.question)
+            answerButton.setHidden(false)
+            nextButton.setHidden(true)
+        }
     }
     
     @IBAction func enterAnswer() {
@@ -46,13 +57,14 @@ class QuestionScreen: WKInterfaceController {
         
         presentTextInputController(withSuggestions: [""], allowedInputMode: .plain) { (result) in
             if let choice = result {
-               print(choice[0])
-                if((choice[0] as AnyObject).lowercased as String) == "hello" {
+                let answerGiven = choice[0] as! String
+                if(self.questionModel[self.currentIndex].answers.contains(answerGiven)) {
                     self.questionField.setText("CORRECT!")
                 } else {
                     self.questionField.setText("WRONG!")
                 }
             }
+                self.currentIndex += 1
                  self.nextButton.setHidden(false)
         }
         
